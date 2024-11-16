@@ -34,18 +34,3 @@ class CitySerializer(serializers.ModelSerializer):
     class Meta:
         model = City
         fields = ('id', 'name',)
-
-cities = City.objects.all()
-
-city = City.objects.get(pk=2)
-
-city = City()
-city.name = 'Albuquerque'
-city.save()
-
-city = City.objects.get(pk=2)
-city.delete()
-
-city = City.objects.get(name='Deenver')
-city.name = 'Denver'
-city.save()
